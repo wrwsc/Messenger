@@ -1,0 +1,23 @@
+<!-- Данный файл является тестовым-->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация через GitLab</title>
+    <link rel="stylesheet" type="text/css" href="/static/styles/auth.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h1 href="/auth?next={{ request.url }}">Авторизация</h1>
+        <a href="https://git.66bit.ru/oauth/authorize?client_id={{ client_id }}&redirect_uri={{ redirect_uri }}&response_type=code" class="gitlab-button">
+            <svg class="gitlab-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                <path d="M23.955 13.587l-1.342-4.135-2.664-8.189a.455.455 0 0 0-.867 0L16.418 9.45H7.582L4.918 1.263a.455.455 0 0 0-.867 0L1.386 9.45.044 13.587a.924.924 0 0 0 .331 1.006L12 23.054l11.625-8.461a.924.924 0 0 0 .33-1.006"/>
+            </svg>
+            Войти через GitLab
+        </a>
+    </div>
+
+    <script src="{{ url_for('static', path='js/auth.js') }}"></script>
+</body>
+</html>

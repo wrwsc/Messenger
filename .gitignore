@@ -1,0 +1,9 @@
+venv/
+.venv/
+__pycache__/
+.env
+*.log
+*.pyc
+*.pyo
+app/migration
+alembic.ini
